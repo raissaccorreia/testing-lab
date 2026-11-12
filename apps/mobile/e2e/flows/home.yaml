@@ -1,0 +1,12 @@
+# End-to-end: the installed app on a simulator/emulator talking to the real
+# API. Requires the API running locally (`pnpm --filter @testing-lab/api dev`).
+appId: dev.testinglab.mobile
+---
+- launchApp:
+    clearState: true
+- assertVisible: 'Testing Lab'
+- extendedWaitUntil:
+    visible:
+      id: 'api-status'
+      text: 'Online.*'
+    timeout: 15000

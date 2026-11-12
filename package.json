@@ -1,0 +1,28 @@
+{
+  "name": "testing-lab",
+  "private": true,
+  "description": "Reference monorepo for unit, integration and end-to-end testing across Next.js, Expo and NestJS.",
+  "license": "MIT",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --filter=@testing-lab/api --filter=@testing-lab/web",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:unit": "turbo run test:unit",
+    "test:integration": "turbo run test:integration",
+    "test:e2e": "turbo run test:e2e --filter=@testing-lab/api --filter=@testing-lab/web",
+    "test:e2e:mobile": "turbo run test:e2e --filter=@testing-lab/mobile",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10",
+    "turbo": "2.11.11"
+  }
+}
