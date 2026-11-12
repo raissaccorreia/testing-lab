@@ -101,6 +101,8 @@ for all apps, plus the API and web E2E suites in a separate job.
   every change must follow.
 - [`docs/architecture.md`](docs/architecture.md): monorepo structure and
   technical decisions.
+- [`docs/dependency-decisions.md`](docs/dependency-decisions.md): why each
+  critical dependency was chosen, the alternatives and their trade-offs.
 - [`docs/features.md`](docs/features.md): how features are chosen, and the
   backlog.
 - [`AGENTS.md`](AGENTS.md): working agreement for coding agents.

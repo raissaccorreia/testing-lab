@@ -33,7 +33,9 @@ same code in two apps, not before. Until then, small duplications such as the
 
 ## Decisions
 
-Short records of choices that are not obvious from the code.
+Short records of choices that are not obvious from the code. The reasoning
+behind each testing dependency, with the alternatives and their trade-offs, is
+in [`dependency-decisions.md`](dependency-decisions.md).
 
 ### Test runners follow each framework's default
 
