@@ -1,0 +1,29 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {},
+    "typecheck": {},
+    "test": {
+      "dependsOn": ["test:unit", "test:integration"]
+    },
+    "test:unit": {
+      "outputs": ["coverage/unit/**"]
+    },
+    "test:integration": {
+      "outputs": ["coverage/integration/**"]
+    },
+    "test:e2e": {
+      "dependsOn": ["build"],
+      "cache": false
+    }
+  }
+}
